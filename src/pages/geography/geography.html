@@ -1,0 +1,111 @@
+<!--
+  Generated template for the GeographyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Geography</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <h5><ion-icon name="arrow-dropleft"></ion-icon>Slide<ion-icon name="arrow-dropright"></ion-icon></h5>
+    <ion-slides>
+      
+        <ion-slide>
+            <ion-list>
+                <h5>
+                    Question 1 <br>Which of the following is tropical grassland?
+                </h5>
+                <ion-item>
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionOne">
+                    <ion-option value="A">Taiga   </ion-option>
+                    <ion-option value="B">Savannah</ion-option>
+                    <ion-option value="C">Pampas</ion-option>
+                    <ion-option value="D">Prairies</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list>
+                <h5>
+                    Question 2<br> The intersecting lines drawn on maps and globes are?
+                </h5>
+                  
+                <ion-item >
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionTwo">
+                    <ion-option value="A">latitudes</ion-option>
+                    <ion-option value="B">longitudes</ion-option>
+                    <ion-option value="C"> geographic grids</ion-option>
+                    <ion-option value="D">None of the above</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group >
+                <h5>
+                    Question 3<br> The great Victoria Desert is located in?
+                </h5>
+             
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionThree">
+                      <ion-option value="A">Canada</ion-option>
+                      <ion-option value="B">West Africa</ion-option>
+                      <ion-option value="C">Australia</ion-option>
+                      <ion-option value="D">North America</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group>
+
+                <h5>
+                    Question 4<br>The Homolographic projection has the correct representation of?
+                </h5>
+            
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionFour">
+                      <ion-option value="A">Shape</ion-option>
+                      <ion-option value="B">Area</ion-option>
+                      <ion-option value="C">Baring</ion-option>
+                      <ion-option value="D">Distance</ion-option>
+                    </ion-select>
+                  </ion-item>
+                
+              </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <ion-list radio-group>
+                  <h5>
+                      Question 5<br>Which of the following countries does not border South Africa?
+                  </h5>
+                
+                  <ion-item >
+                      <ion-label>Answer</ion-label>
+                      <ion-select [(ngModel)]="questionFive">
+                        <ion-option value="A">Namibia</ion-option>
+                        <ion-option value="B">Egypt</ion-option>
+                        <ion-option value="C">Botswana</ion-option>
+                        <ion-option value="D">Zimbabwe</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-list>
+                  <button ion-button color="light" (click)="btnSubmit()">Submit</button>
+            </ion-slide>
+            
+      </ion-slides>
+
+</ion-content>

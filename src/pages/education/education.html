@@ -1,0 +1,110 @@
+<!--
+  Generated template for the EducationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>General</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+ <ion-content padding>
+    <h5><ion-icon name="arrow-dropleft"></ion-icon>Slide<ion-icon name="arrow-dropright"></ion-icon></h5>
+    <ion-slides>
+      
+        <ion-slide>
+            <ion-list>
+                <h5>
+                    Question 1<br>Which popular cool drink was created in South Africa before going global?
+                  </h5>
+                <ion-item >
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionOne">
+                    <ion-option value="A">Appletiser</ion-option>
+                    <ion-option value="B">Fanta Grape</ion-option>
+                    <ion-option value="C">Stoney Ginger Beer</ion-option>
+                    <ion-option value="D">Lemon Twist</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list>
+                <h5>
+                    Question 2<br> What does South Africa produce more of than any other country?
+                  </h5>
+                <ion-item >
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionTwo">
+                    <ion-option value="A">Raw maize</ion-option>
+                    <ion-option value="B">Sugar cane</ion-option>
+                    <ion-option value="C"> Coal power</ion-option>
+                    <ion-option value="D">Macadamia nuts</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group >
+                <h5>
+                  Question 3<br> Which of these does not represent a national symbol for South Africa?
+                </h5>
+            
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionThree">
+                      <ion-option value="A">The Galjoen</ion-option>
+                      <ion-option value="B">The Blue Crane</ion-option>
+                      <ion-option value="C"> The King Protea</ion-option>
+                      <ion-option value="D">The Baobab</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group>
+
+                <h5>
+                  Question 4<br> Which of the following South African landmarks is not a world heritage site?
+                </h5>
+            
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionFour">
+                      <ion-option value="A">Robben Island</ion-option>
+                      <ion-option value="B">Vredefort Dome</ion-option>
+                      <ion-option value="C"> Cradle of Humankind</ion-option>
+                      <ion-option value="D">Kruger National Park</ion-option>
+                    </ion-select>
+                  </ion-item>
+                
+              </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <ion-list radio-group>
+                  <h5 >
+                    Question 5<br>How many democratically elected heads of state has South Africa had?
+                  </h5>
+              
+                  <ion-item >
+                      <ion-label>Answer</ion-label>
+                      <ion-select [(ngModel)]="questionFive">
+                        <ion-option value="A">4</ion-option>
+                        <ion-option value="B">5</ion-option>
+                        <ion-option value="C"> 3</ion-option>
+                        <ion-option value="D">6</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-list>
+                  <button ion-button color="light" (click)="btnSubmit()">Submit</button>
+            </ion-slide>
+            
+      </ion-slides>
+   
+</ion-content>

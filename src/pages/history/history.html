@@ -1,0 +1,110 @@
+<!--
+  Generated template for the HistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <h5><ion-icon name="arrow-dropleft"></ion-icon>Slide<ion-icon name="arrow-dropright"></ion-icon></h5>
+    <ion-slides>
+      
+        <ion-slide>
+            <ion-list>
+                <h5 >
+                    Question 1<br> Soweto stands for..
+                </h5>
+              <ion-item>
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionOne">
+                    <ion-option value="A">South African Western Town   </ion-option>
+                    <ion-option value="B"> South Western Town</ion-option>
+                    <ion-option value="C">Sobukwe Western Townships</ion-option>
+                    <ion-option value="D">South western Township</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list>
+                <h5>
+                    Question 2<br> Which is the most popular mountain for tourists
+                </h5>
+   
+                <ion-item >
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionTwo">
+                    <ion-option value="A">Table mountain</ion-option>
+                    <ion-option value="B">Lions Head</ion-option>
+                    <ion-option value="C"> Devils Peak</ion-option>
+                    <ion-option value="D">Champagne Coast</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group >
+                <h5>
+                    Question 3<br> What is the most largest park in South Africa
+                  </h5>
+                
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionThree">
+                      <ion-option value="A">Kruger National Park</ion-option>
+                      <ion-option value="B">Madikwe Game Reserve</ion-option>
+                      <ion-option value="C">Pilanesberg Game Reserve</ion-option>
+                      <ion-option value="D">Kgalagadi Transfrontier Park</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group>
+
+                <h5>
+                    Question 4<br> Nelson Mandela spent 18 years imprisionment at an island called?
+                  </h5>
+                 
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionFour">
+                      <ion-option value="A">Msikaba Island</ion-option>
+                      <ion-option value="B">Robben Island</ion-option>
+                      <ion-option value="C"> Marion Island</ion-option>
+                      <ion-option value="D">Easter Island</ion-option>
+                    </ion-select>
+                  </ion-item>
+                
+              </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <ion-list radio-group>
+                  <h5 >
+                      Question 5<br>Johannesburg's population boomed  after the discovery of ?
+                    </h5> 
+              
+                  <ion-item >
+                      <ion-label>Answer</ion-label>
+                      <ion-select [(ngModel)]="questionFive">
+                        <ion-option value="A"> Cocoa Beans</ion-option>
+                        <ion-option value="B">Gold</ion-option>
+                        <ion-option value="C">Uranium</ion-option>
+                        <ion-option value="D">Oil</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-list>
+                  <button ion-button color="light" (click)="btnSubmit()">Submit</button>
+            </ion-slide>
+            
+      </ion-slides>
+      </ion-content>

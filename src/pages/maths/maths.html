@@ -1,0 +1,112 @@
+<!--
+  Generated template for the MathsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mathematics</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <h5><ion-icon name="arrow-dropleft"></ion-icon>Slide<ion-icon name="arrow-dropright"></ion-icon></h5>
+    <ion-slides>
+      
+        <ion-slide>
+            <ion-list>
+                <h5 >
+                    Question 1. <br>2*5
+                  </h5>
+                 
+              <ion-item>
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionOne">
+                    <ion-option value="A">25</ion-option>
+                    <ion-option value="B">16</ion-option>
+                    <ion-option value="C">10</ion-option>
+                    <ion-option value="D">20</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list>
+                <h5>
+                    Question 2<br> 9*3
+                  </h5>
+                     
+                <ion-item >
+                  <ion-label>Answer</ion-label>
+                  <ion-select [(ngModel)]="questionTwo">
+                    <ion-option value="A">28</ion-option>
+                    <ion-option value="B">21</ion-option>
+                    <ion-option value="C">32</ion-option>
+                    <ion-option value="D">27</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group >
+                <h5>
+                    Question 3<br> 7*6
+                  </h5>
+                    
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionThree">
+                      <ion-option value="A">42</ion-option>
+                      <ion-option value="B">38</ion-option>
+                      <ion-option value="C">37</ion-option>
+                      <ion-option value="D">29</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <ion-list radio-group>
+
+                <h5>
+                    Question 4<br> 5*9
+                  </h5>
+                     
+                <ion-item >
+                    <ion-label>Answer</ion-label>
+                    <ion-select [(ngModel)]="questionFour">
+                      <ion-option value="A">55</ion-option>
+                      <ion-option value="B">45</ion-option>
+                      <ion-option value="C">35</ion-option>
+                      <ion-option value="D">60</ion-option>
+                    </ion-select>
+                  </ion-item>
+                
+              </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <ion-list radio-group>
+                  <h5 >
+                      Question 5<br> 99*1
+                    </h5>
+                       
+                  <ion-item >
+                      <ion-label>Answer</ion-label>
+                      <ion-select [(ngModel)]="questionFive">
+                        <ion-option value="A">91</ion-option>
+                        <ion-option value="B">99</ion-option>
+                        <ion-option value="C">1</ion-option>
+                        <ion-option value="D">98</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-list>
+                  <button ion-button color="light" (click)="btnSubmit()">Submit</button>
+            </ion-slide>
+            
+      </ion-slides>
+
+</ion-content>

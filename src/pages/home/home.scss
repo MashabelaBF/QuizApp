@@ -6,6 +6,9 @@ button.button{
     margin-top: 10%;
     display: bottom;
     opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px;
+    color: #CCCCCC;
 }
 
 div{
@@ -67,4 +70,7 @@ ion-slide.swiper-slide{
     height: 45%;
     width: 40%;
     
+}
+p{
+    background-color: rgba(0, 0, 0, 0);
 }

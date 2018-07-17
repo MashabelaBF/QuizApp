@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ResultsPage } from '../results/results';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the HistoryPage page.
@@ -21,23 +22,59 @@ export class HistoryPage {
   questionThree;
   questionFour;
   questionFive;
-  score;
+  score=0;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HistoryPage');
   }
 
-  btnSubmit(event) {
+showConfirm() {
+  const confirm = this.alertCtrl.create({
+    title: 'Congradulations!',
+    message: 'You got ' +this.score+ ' click next to proceed to Stage 2',
+    buttons: [
+      {
+        text: 'Quit',
+        handler: () => {
+          this.navCtrl.push(HomePage);
+        }
+      },
+      {
+        text: 'Next',
+        handler: () => {
+          this.navCtrl.push(ResultsPage);
+        }
+      }
+    ]
+  });
+  confirm.present();
+}
+btnSubmit() {
 
-    if (this.questionOne == "D" && this.questionTwo == "A" && 
-        this.questionThree == "A" && this.questionFour == "B" && this.questionFive == "B") {
-        this.score = 5;
-        this.navCtrl.push(ResultsPage);
-    }else{
-        alert("Sorry! you need to get everything correct, Please check your answer and try again");
-    }
+     if(this.questionOne=="D"){
+        this.score=this.score+1;    
+     }
+     if(this.questionTwo=="A"){
+       this.score=this.score+1;
+     }
+     if(this.questionThree=="A"){
+       this.score=this.score+1;
+     }
+     if(this.questionFour=="B"){
+       this.score=this.score+1;
+     }
+     if(this.questionFive=="B"){
+       this.score=this.score+1;
+     }
+     if(this.score==5){
+      this.showConfirm();
+  }else{
+        alert("Sorry! you Scored " +this.score+"/5"+" you need to get everything correct, Please check your answers and try again");
+        this.navCtrl.push(HistoryPage);
+        console.log(this.score);
+  }
 }
 }

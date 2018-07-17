@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HistoryPage } from '../history/history';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the GeographyPage page.
@@ -21,23 +22,59 @@ export class GeographyPage {
   questionThree;
   questionFour;
   questionFive;
-  score;
+  score=0;
  
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GeographyPage');
   }
 
-  btnSubmit(event) {
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Congradulations!',
+      message: 'You got ' +this.score+ ' click next to proceed to Stage 2',
+      buttons: [
+        {
+          text: 'Quit',
+          handler: () => {
+            this.navCtrl.push(HomePage);
+          }
+        },
+        {
+          text: 'Next',
+          handler: () => {
+            this.navCtrl.push(HistoryPage);
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+  btnSubmit() {
 
-    if (this.questionOne == "B" && this.questionTwo == "C" && 
-        this.questionThree == "C" && this.questionFour == "B" && this.questionFive == "B") {
-        this.score = 5;
-        this.navCtrl.push(HistoryPage);
+       if(this.questionOne=="B"){
+          this.score=this.score+1;    
+       }
+       if(this.questionTwo=="C"){
+         this.score=this.score+1;
+       }
+       if(this.questionThree=="C"){
+         this.score=this.score+1;
+       }
+       if(this.questionFour=="B"){
+         this.score=this.score+1;
+       }
+       if(this.questionFive=="B"){
+         this.score=this.score+1;
+       }
+       if(this.score==5){
+        this.showConfirm();
     }else{
-        alert("Sorry! you need to get everything correct, Please check your answer and try again");
+          alert("Sorry! you Scored " +this.score+"/5"+" you need to get everything correct, Please check your answers and try again");
+          this.navCtrl.push(GeographyPage);
+          console.log(this.score);
     }
 }
 }

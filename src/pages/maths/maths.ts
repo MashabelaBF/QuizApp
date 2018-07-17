@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { SciencePage } from '../science/science';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the MathsPage page.
@@ -21,23 +22,58 @@ export class MathsPage {
   questionThree;
   questionFour;
   questionFive;
-  score;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  score=0;
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MathsPage');
   }
-  btnSubmit(event) {
-
-    if (this.questionOne == "C" && this.questionTwo == "D" && 
-        this.questionThree == "A" && this.questionFour == "B" && this.questionFive == "B") {
-        this.score = 5;
-        this.navCtrl.push(SciencePage);
+  
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Congradulations!',
+      message: 'You got ' +this.score+ ' click next to proceed to Stage 2',
+      buttons: [
+        {
+          text: 'Quit',
+          handler: () => {
+            this.navCtrl.push(HomePage);
+          }
+        },
+        {
+          text: 'Next',
+          handler: () => {
+            this.navCtrl.push(SciencePage);
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+  btnSubmit() {
+  
+       if(this.questionOne=="C"){
+          this.score=this.score+1;    
+       }
+       if(this.questionTwo=="D"){
+         this.score=this.score+1;
+       }
+       if(this.questionThree=="A"){
+         this.score=this.score+1;
+       }
+       if(this.questionFour=="B"){
+         this.score=this.score+1;
+       }
+       if(this.questionFive=="B"){
+         this.score=this.score+1;
+       }
+       if(this.score==5){
+        this.showConfirm();
     }else{
-        alert("Sorry! you need to get everything correct, Please check your answer and try again");
+          alert("Sorry! you Scored " +this.score+"/5"+" you need to get everything correct, Please check your answers and try again");
+          this.navCtrl.push(MathsPage);
+          console.log(this.score);
     }
-   
-
   }
 }

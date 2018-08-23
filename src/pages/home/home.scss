@@ -14,10 +14,7 @@ button.button{
 div{
     text-align: center;
 }
-div.scroll-content{
-    background-image: url(../../assets/imgs/6ccaa14184aab92ce12151bde099f00a.gif);
-    border-style: groove;
-}
+
 img{
     border-radius: 50%;
     padding-right: 5%;
@@ -50,9 +47,15 @@ p{
 
 }
 div.scroll-content{
-    background-image: url(../../assets/imgs/6ccaa14184aab92ce12151bde099f00a.gif);
+    background-image: url(../../assets/imgs/water.jpg);
     border-style: groove;
-    opacity: 0.9;
+    // opacity: 10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: #CCCCCC;
+    text-align: center;
+    
 }
 h5,h1{
     color: white;
@@ -67,9 +70,10 @@ ion-navbar.toolbar{
     color: black;
 }
 ion-slide.swiper-slide{
-    height: 45%;
+    height: 50%;
     width: 40%;
-    
+    // overflow: hidden;
+    // position: fixed;
 }
 p{
     background-color: rgba(0, 0, 0, 0);

@@ -33,7 +33,7 @@ export class SciencePage {
 showConfirm() {
   const confirm = this.alertCtrl.create({
     title: 'Congradulations!',
-    message: 'You got ' +this.score+ ' click next to proceed to Stage 2',
+    message: 'You got ' +this.score+ '/5 click next to proceed to the next level',
     buttons: [
       {
         text: 'Quit',
@@ -74,5 +74,8 @@ btnSubmit() {
         alert("Sorry! you Scored " +this.score+"/5"+" you need to get everything correct, Please check your answers and try again");
         this.navCtrl.push(SciencePage);
   }
+}
+gotoHome(){
+  this.navCtrl.push(HomePage);
 }
 }

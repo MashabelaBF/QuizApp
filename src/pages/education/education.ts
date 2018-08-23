@@ -36,10 +36,11 @@ export class EducationPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EducationPage');
   }
+  // alert for confirming the score
   showConfirm() {
     const confirm = this.alertCtrl.create({
       title: 'Congradulations!',
-      message: 'You got ' +this.score+ ' click next to proceed to Stage 2',
+      message: 'You got ' +this.score+ '/5 click next to proceed to the next level',
       buttons: [
         {
           text: 'Quit',
@@ -58,7 +59,7 @@ export class EducationPage {
     confirm.present();
   }
   btnSubmit() {
-
+      //Compute the score
        if(this.questionOne=="A"){
           this.score=this.score+1;    
        }
@@ -74,6 +75,7 @@ export class EducationPage {
        if(this.questionFive=="D"){
          this.score=this.score+1;
        }
+      //  Check if you got everything correct
        if(this.score==5){
         this.showConfirm();
     }else{
@@ -82,7 +84,9 @@ export class EducationPage {
           
     }
 }
- 
+gotoHome(){
+  this.navCtrl.push(HomePage);
+}
  }
  
 

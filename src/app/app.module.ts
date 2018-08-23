@@ -12,6 +12,7 @@ import { SciencePage } from '../pages/science/science';
 import { MathsPage } from '../pages/maths/maths';
 import { HistoryPage } from '../pages/history/history';
 import { ResultsPage } from '../pages/results/results';
+import { CategoryPage } from '../pages/category/category';
 @NgModule({
   declarations: [
     MyApp,
@@ -22,6 +23,7 @@ import { ResultsPage } from '../pages/results/results';
     MathsPage,
     HistoryPage,
     ResultsPage,
+    CategoryPage,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { ResultsPage } from '../pages/results/results';
     MathsPage,
     HistoryPage,
     ResultsPage,
+    CategoryPage,
   ],
   providers: [
     StatusBar,

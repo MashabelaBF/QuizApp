@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { EducationPage } from '../education/education';
 import { ResultsPage } from '../results/results';
+import { CategoryPage } from '../category/category';
 
 
 
@@ -20,5 +21,11 @@ gotoEdu(){
 }
 gotoEd(){
   this.navCtrl.push(ResultsPage);
+}
+gotoCategory(){
+  this.navCtrl.push(CategoryPage);
+}
+gotoHome(){
+  this.navCtrl.push(HomePage);
 }
 }
